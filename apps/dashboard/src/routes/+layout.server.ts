@@ -135,38 +135,38 @@ function isURLCustomDomain(url: URL) {
 
 function getBaseMetaTags(url: URL) {
   return Object.freeze({
-    title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+    title: 'GTME School | Master GTM Engineering',
     description:
-      'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
+      'The elite training ground for GTM engineers. Build workflows that print money.',
     canonical: new URL(url.pathname, url.origin).href,
     openGraph: {
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
       locale: 'en_IE',
-      title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+      title: 'GTME School | Master GTM Engineering',
       description:
-        'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
-      siteName: 'ClassroomIO',
+        'The elite training ground for GTM engineers. Build workflows that print money.',
+      siteName: 'GTME School',
       images: [
         {
-          url: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-          alt: 'ClassroomIO OG Image',
+          url: 'https://gtmeschool.ai/og-image.png',
+          alt: 'GTME School',
           width: 1920,
           height: 1080,
-          secureUrl: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-          type: 'image/jpeg'
+          secureUrl: 'https://gtmeschool.ai/og-image.png',
+          type: 'image/png'
         }
       ]
     },
     twitter: {
-      handle: '@classroomio',
-      site: '@classroomio',
+      handle: '@leanscale',
+      site: '@leanscale',
       cardType: 'summary_large_image' as const,
-      title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+      title: 'GTME School | Master GTM Engineering',
       description:
-        'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
-      image: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-      imageAlt: 'ClassroomIO OG Image'
+        'The elite training ground for GTM engineers. Build workflows that print money.',
+      image: 'https://gtmeschool.ai/og-image.png',
+      imageAlt: 'GTME School'
     }
   });
 }

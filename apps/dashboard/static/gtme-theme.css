@@ -102,3 +102,41 @@ button[class*="contained"]:hover,
 .btn-contained:hover {
   background-color: #2dd10f !important;
 }
+
+/* Form inputs - dark theme */
+.form-input,
+input.form-input,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #1a1a2e !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+.form-input::placeholder,
+input::placeholder {
+  color: #666 !important;
+}
+
+.form-input:focus,
+input:focus {
+  border-color: #39ff14 !important;
+  background-color: #1a1a2e !important;
+}
+
+/* Labels */
+label p,
+.text-sm {
+  color: #fff;
+}
+
+/* Auth page specific */
+.container p,
+.container label {
+  color: #fff !important;
+}
+
+.container .font-semibold {
+  color: #fff !important;
+}

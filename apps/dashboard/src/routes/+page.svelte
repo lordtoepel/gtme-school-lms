@@ -1,54 +1,32 @@
 <script>
   import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
   import FlowStreamReferenceIcon from 'carbon-icons-svelte/lib/FlowStreamReference.svelte';
   import ChartClusterBarIcon from 'carbon-icons-svelte/lib/ChartClusterBar.svelte';
   import MachineLearningModelIcon from 'carbon-icons-svelte/lib/MachineLearningModel.svelte';
-  import TextField from '$lib/components/Form/TextField.svelte';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
-  import { getSupabase } from '$lib/utils/functions/supabase';
-  import { validateEmail } from '$lib/utils/functions/validateEmail';
 
-  let email = '';
-  let isAdding = false;
-  let success = false;
-
-  const supabase = getSupabase();
   const animate = 'transition delay-75 duration-300 ease-in-out';
   const areas = [
     {
-      title: 'Access',
+      title: 'Workflow Blueprints',
       description:
-        'Quickly find any material you need to get your job done. ClassroomIO offers the All-in-on-platform'
+        'Production-ready automation recipes you can deploy today. No fluff, just workflows that work.'
     },
     {
-      title: 'Analytics',
+      title: 'AI Agent Playbooks',
       description:
-        'Avoid assumptions, better understand the needs of your classrooms and give students a personlized experience'
+        'Build sales agents that qualify, nurture, and close. The prompts and architectures that actually convert.'
     },
     {
-      title: 'Automation',
+      title: 'Enrichment Stacks',
       description:
-        'Lesson reminders, deadline reminders and many other automated alerts to help everyone in the learning process be proactive'
+        'Data enrichment that doesn\'t suck. Waterfall strategies, provider comparisons, and cost optimization.'
     }
   ];
 
-  async function handleSubmit() {
-    if (!email || !validateEmail(email)) return;
-    isAdding = true;
-
-    await supabase.from('waitinglist').insert([{ email }]);
-
-    success = true;
-
-    setTimeout(() => {
-      isAdding = false;
-      success = false;
-      email = '';
-    }, 5000);
-  }
-
   onMount(() => {
-    console.log('Welcome to CIO');
+    console.log('Welcome to GTME School');
   });
 </script>
 
@@ -56,51 +34,49 @@
   <title>GTME School - Master GTM Engineering</title>
 </svelte:head>
 
-<div class="md:h-[93vh] w-screen flex items-center justify-center flex-col m-2 sm:m-0 font-sans">
-  <div>
-    <h3 class="dark:text-white text-4xl text-center">
-      <span class="text-primary-700">GTME</span> School
-    </h3>
-    <p class="dark:text-white text-lg text-center">
+<div class="min-h-screen w-screen flex items-center justify-center flex-col p-6 font-sans" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+  <div class="text-center mb-8">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">
+      <span style="color: #39ff14;">GTME</span> <span class="text-white">School</span>
+    </h1>
+    <p class="text-gray-400 text-xl max-w-xl mx-auto">
       The elite training ground for GTM engineers 🚀
     </p>
   </div>
 
-  <form on:submit|preventDefault={handleSubmit} class="my-4 hidden">
-    <div class="flex items-center flex-col sm:flex-row">
-      {#if success}
-        <p class="dark:text-white">You have been added successfully. Thanks for joining.</p>
-      {:else}
-        <TextField
-          bind:value={email}
-          type="email"
-          placeholder="Enter your email.."
-          className="mr-3 my-2"
-          isRequired={true}
-          isDisabled={isAdding}
-        />
-        <PrimaryButton type="submit" isLoading={isAdding}>Join waiting list</PrimaryButton>
-      {/if}
-    </div>
-  </form>
+  <div class="flex gap-4 mb-12">
+    <a href="/login" class="px-8 py-3 font-semibold rounded-lg text-black" style="background: #39ff14;">
+      Login
+    </a>
+    <a href="/signup" class="px-8 py-3 font-semibold rounded-lg text-white border border-gray-600 hover:border-gray-400 transition-colors">
+      Sign Up
+    </a>
+  </div>
 
-  <div class="flex flex-col md:flex-row mt-4">
+  <div class="flex flex-col md:flex-row gap-6 max-w-5xl">
     {#each areas as area, index}
       <div
-        class="max-w-[350px] m-3 bg-white dark:bg-black rounded-md py-3 px-12 active shadow-xl border-2 hover:border-primary-700 {animate}"
+        class="max-w-[350px] p-6 rounded-xl border border-gray-800 hover:border-green-500/50 {animate}"
+        style="background: rgba(255,255,255,0.02);"
       >
-        <h3 class="dark:text-white text-3xl">
+        <div class="mb-3" style="color: #39ff14;">
           {#if index === 0}
-            <FlowStreamReferenceIcon size={32} class="carbon-icon dark:text-white" />
+            <FlowStreamReferenceIcon size={32} />
           {:else if index === 1}
-            <ChartClusterBarIcon size={32} class="carbon-icon dark:text-white" />
+            <ChartClusterBarIcon size={32} />
           {:else if index === 2}
-            <MachineLearningModelIcon size={32} class="carbon-icon dark:text-white" />
+            <MachineLearningModelIcon size={32} />
           {/if}
+        </div>
+        <h3 class="text-white text-xl font-semibold mb-2">
           {area.title}
         </h3>
-        <p class="dark:text-white">{area.description}</p>
+        <p class="text-gray-400">{area.description}</p>
       </div>
     {/each}
   </div>
+
+  <p class="mt-12 text-gray-500 text-sm">
+    Powered by <a href="https://leanscale.team" class="hover:text-white transition-colors" style="color: #39ff14;">LeanScale</a>
+  </p>
 </div>

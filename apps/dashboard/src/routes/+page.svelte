@@ -53,24 +53,16 @@
 </script>
 
 <svelte:head>
-  <title>ClassroomIO - The classroom software</title>
+  <title>GTME School - Master GTM Engineering</title>
 </svelte:head>
 
 <div class="md:h-[93vh] w-screen flex items-center justify-center flex-col m-2 sm:m-0 font-sans">
-  <!--
-    <img
-      src="/logo-192.png"
-      alt="ClassroomIO logo"
-      class="rounded inline-block mx-auto w-20 h-20 sm:w-auto sm:h-auto"
-      data-atf="1"
-    />
-  -->
   <div>
     <h3 class="dark:text-white text-4xl text-center">
-      Classroom<span class="text-primary-700">IO</span>
+      <span class="text-primary-700">GTME</span> School
     </h3>
     <p class="dark:text-white text-lg text-center">
-      The operating system for classroooms of the future 🚀🚀🚀.
+      The elite training ground for GTM engineers 🚀
     </p>
   </div>
 

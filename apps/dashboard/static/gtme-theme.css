@@ -1,0 +1,62 @@
+/* GTME School Theme Overrides */
+
+:root {
+  /* Neon green primary from GTMESchool.ai */
+  --cds-interactive-01: #39ff14;
+  --cds-interactive-02: #2dd10f;
+  --cds-primary-button-background: #39ff14;
+  --cds-primary-button-background-hover: #2dd10f;
+  --cds-link-01: #39ff14;
+  --cds-link-02: #2dd10f;
+  --cds-focus: #39ff14;
+  --cds-border-interactive: #39ff14;
+}
+
+/* Primary color overrides */
+.text-primary-700 {
+  color: #39ff14 !important;
+}
+
+.bg-primary-700 {
+  background-color: #39ff14 !important;
+}
+
+.border-primary-700 {
+  border-color: #39ff14 !important;
+}
+
+.hover\:border-primary-700:hover {
+  border-color: #39ff14 !important;
+}
+
+/* Carbon button overrides */
+.bx--btn--primary {
+  background-color: #39ff14 !important;
+  color: #000 !important;
+}
+
+.bx--btn--primary:hover {
+  background-color: #2dd10f !important;
+}
+
+/* Dark mode enhancements */
+.dark {
+  --cds-interactive-01: #39ff14;
+  --cds-text-01: #fff;
+}
+
+/* Hide ClassroomIO branding elements */
+[data-cio-branding],
+.classroomio-branding {
+  display: none !important;
+}
+
+/* Link colors */
+a.text-primary-700,
+.text-primary-700 a {
+  color: #39ff14 !important;
+}
+
+a.text-primary-700:hover {
+  color: #2dd10f !important;
+}

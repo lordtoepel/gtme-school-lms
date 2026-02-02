@@ -1,8 +1,8 @@
 {
-  "background_color": "#ffffff",
-  "theme_color": "#333333",
-  "name": "ClassroomIO",
-  "short_name": "ClassroomIO",
+  "background_color": "#0a0a0a",
+  "theme_color": "#39ff14",
+  "name": "GTME School",
+  "short_name": "GTME School",
   "display": "minimal-ui",
   "start_url": "/",
   "icons": [

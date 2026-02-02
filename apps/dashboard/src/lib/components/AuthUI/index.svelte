@@ -50,14 +50,14 @@
   }
 </script>
 
-<div class="app-background flex min-h-screen w-full items-center justify-center">
-  <div class="border-gray container border bg-white dark:bg-black">
+<div class="flex min-h-screen w-full items-center justify-center" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+  <div class="container border border-gray-800 bg-black rounded-xl">
     <div class="flex flex-col items-center p-2 lg:px-8 lg:py-3">
       {#if !showOnlyContent || showLogo}
         <div class="flex w-full flex-col items-center justify-center pt-2">
           <Avatar
             src={$currentOrg.avatar_url ? $currentOrg.avatar_url : '/logo-192.png'}
-            name={$currentOrg.name ? $currentOrg.name : 'ClassroomIO'}
+            name={$currentOrg.name ? $currentOrg.name : 'GTME School'}
             shape="rounded-md"
             width="w-10"
             height="max-h-10"
@@ -65,7 +65,11 @@
           />
           <a href="/">
             <h4 class="mt-0 text-xl dark:text-white">
-              {$currentOrg.name ? $currentOrg.name : 'ClassroomIO'}
+              {#if $currentOrg.name}
+                {$currentOrg.name}
+              {:else}
+                <span style="color: #39ff14;">GTME</span> School
+              {/if}
             </h4>
           </a>
         </div>
@@ -79,7 +83,7 @@
       </form>
       {#if !showOnlyContent && !hideGoogleAuth}
         <div class="mb-3 w-10/12">
-          <p class="mb-5 text-sm dark:text-white">{$t('login.signup_with')}:</p>
+          <p class="mb-5 text-sm text-white">{$t('login.signup_with')}:</p>
           <PrimaryButton
             variant={VARIANTS.OUTLINED}
             onClick={signInWithGoogle}
@@ -95,15 +99,15 @@
       {/if}
     </div>
     {#if !showOnlyContent}
-      <div class="border-grey w-full border-t p-6 text-center">
+      <div class="w-full border-t border-gray-800 p-6 text-center text-gray-400">
         {#if isLogin}
           {$t('login.not_registered_yet')}
-          <a class="text-primary-700 hover:underline" href="/signup{$page.url.search}"
+          <a class="text-[#39ff14] hover:underline" href="/signup{$page.url.search}"
             >{$t('login.signup')}</a
           >
         {:else}
           {$t('login.already_have_account')}
-          <a class="text-primary-700 hover:underline" href="/login{$page.url.search}"
+          <a class="text-[#39ff14] hover:underline" href="/login{$page.url.search}"
             >{$t('login.login')}</a
           >
         {/if}

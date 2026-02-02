@@ -8,19 +8,22 @@
 <div class="logo">
   <a
     href="/"
-    title={`${$t('navigation.goto')} ${orgName || 'ClassroomIO'} ${$t('navigation.home')}`}
+    title={`${$t('navigation.goto')} ${orgName || 'GTME School'} ${$t('navigation.home')}`}
     class="flex items-center gap-2"
     id="logo"
     data-hveid="8"
   >
     <img
       src={logo || '/logo-192.png'}
-      alt={`${orgName || 'ClassroomIO'} logo`}
+      alt={`${orgName || 'GTME School'} logo`}
       class="mx-auto inline-block w-9 rounded"
       data-atf="1"
     />
     {#if orgName}
       <span class="line-clamp-1 hidden text-sm font-medium md:block">{orgName}</span>
+    {:else}
+      <span class="line-clamp-1 hidden text-sm font-medium md:block" style="color: #39ff14;">GTME</span>
+      <span class="line-clamp-1 hidden text-sm font-medium md:block">School</span>
     {/if}
   </a>
 </div>

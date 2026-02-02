@@ -119,7 +119,7 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Join GTME School</title>
 </svelte:head>
 
 <SenjaEmbed id="aa054658-1e15-4d00-8920-91f424326c4e" />

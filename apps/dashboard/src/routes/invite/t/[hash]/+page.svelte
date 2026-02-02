@@ -183,7 +183,7 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Join GTME School</title>
 </svelte:head>
 
 <AuthUI

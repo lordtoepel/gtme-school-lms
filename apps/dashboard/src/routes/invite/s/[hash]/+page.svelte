@@ -132,7 +132,7 @@
 </script>
 
 <svelte:head>
-  <title>Join {data.name} on ClassroomIO</title>
+  <title>Join {data.name} on GTME School</title>
 </svelte:head>
 
 <AuthUI

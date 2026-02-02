@@ -50,7 +50,7 @@
 
   function pageSetup() {
     console.log(
-      'Welcome to ClassroomIO, we are grateful you chose us.',
+      'Welcome to GTME School 🚀',
       $page.url.host,
       `\nIs student domain: ${data.isOrgSite}`,
       data

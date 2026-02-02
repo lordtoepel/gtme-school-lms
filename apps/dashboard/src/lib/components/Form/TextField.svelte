@@ -59,11 +59,11 @@
 
 <label class="block relative {className}">
   {#if label}
-    <p for="text-field" class="text-sm dark:text-white text-left m-0 {labelClassName}">
+    <p for="text-field" class="text-sm text-white text-left m-0 {labelClassName}">
       {label}
 
       {#if isRequired}
-        <span class="text-red-700">*</span>
+        <span class="text-[#39ff14]">*</span>
       {/if}
     </p>
   {/if}
@@ -100,9 +100,9 @@
     </span>
   {/if}
   {#if errorMessage}
-    <p class="text-sm text-red-500">{errorMessage}</p>
+    <p class="text-sm text-red-400">{errorMessage}</p>
   {:else if helperMessage}
-    <p class="dark:text-white text-sm opacity-70">
+    <p class="text-gray-400 text-sm">
       {helperMessage}
     </p>
   {/if}

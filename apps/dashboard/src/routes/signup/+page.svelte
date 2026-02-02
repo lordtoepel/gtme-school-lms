@@ -126,7 +126,7 @@
 
 <AuthUI {supabase} isLogin={false} {handleSubmit} isLoading={loading} bind:formRef>
   <div class="mt-4 w-full">
-    <p class="mb-6 text-lg font-semibold dark:text-white">Create a free account</p>
+    <p class="mb-6 text-lg font-semibold text-white">Create a free account</p>
     <!-- <TextField
       label="Full Name"
       bind:value={fields.name}

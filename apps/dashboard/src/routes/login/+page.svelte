@@ -57,7 +57,7 @@
 
 <AuthUI {supabase} isLogin={true} {handleSubmit} isLoading={loading} bind:formRef>
   <div class="mt-4 w-full">
-    <p class="mb-6 text-lg font-semibold dark:text-white">{$t('login.welcome')}</p>
+    <p class="mb-6 text-lg font-semibold text-white">{$t('login.welcome')}</p>
     <TextField
       label={$t('login.email')}
       bind:value={fields.email}

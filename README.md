@@ -192,3 +192,4 @@ To get the environmental variables for supabase continue to step(5)
     - Enter password: `123456`
      
     To learn more about how to login with a dummy account, [go here.](https://classroomio.com/docs/contributor-guides/demo-accounts)
+

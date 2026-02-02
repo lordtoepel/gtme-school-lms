@@ -14,7 +14,7 @@
   export let logo: string | undefined = undefined;
   export let orgName: string | undefined = undefined;
   export let isOrgSite = false;
-  export let backgroundColor = 'bg-white dark:bg-black';
+  export let backgroundColor = 'bg-black';
   export let customLinks: TCustomLinks | undefined = undefined;
 
   let navClass = '';
@@ -30,7 +30,7 @@
 </script>
 
 <nav
-  class="{navClass} {backgroundColor} sticky top-0 z-50 flex w-full border-b border-l-0 border-r-0 border-t-0 border-gray-300 px-2 py-1"
+  class="{navClass} {backgroundColor} sticky top-0 z-50 flex w-full border-b border-l-0 border-r-0 border-t-0 border-gray-800 px-2 py-1"
 >
   <ul class="flex w-full items-center">
     <Logo {logo} {orgName} />
@@ -40,7 +40,7 @@
     <!-- Mobile Menu Button - Only show when custom links exist -->
     {#if isOrgSite && showLinks}
       <button
-        class="mobile-menu-btn hover:text-primary-600 rounded-md p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-100 lg:hidden"
+        class="mobile-menu-btn hover:text-primary-600 rounded-md p-2 text-white transition-colors duration-200 hover:bg-gray-800 lg:hidden"
         on:click={toggleMobileMenu}
         aria-label="Toggle mobile menu"
       >

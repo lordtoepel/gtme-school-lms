@@ -29,14 +29,14 @@
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div
       bind:this={mobileMenuRef}
-      class="mobile-menu-sidebar absolute right-0 top-0 h-full w-64 transform bg-white shadow-lg transition-transform duration-300 ease-in-out"
+      class="mobile-menu-sidebar absolute right-0 top-0 h-full w-64 transform bg-black shadow-lg transition-transform duration-300 ease-in-out"
       on:click|stopPropagation
     >
-      <div class="flex items-center justify-between border-b border-gray-200 p-4">
-        <h3 class="text-lg font-semibold text-gray-800">Menu</h3>
+      <div class="flex items-center justify-between border-b border-gray-800 p-4">
+        <h3 class="text-lg font-semibold text-white">Menu</h3>
         <button
           on:click={closeMobileMenu}
-          class="rounded-md p-2 text-gray-500 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-700"
+          class="rounded-md p-2 text-gray-400 transition-colors duration-200 hover:bg-gray-800 hover:text-white"
         >
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path

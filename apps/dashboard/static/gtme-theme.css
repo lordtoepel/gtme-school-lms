@@ -10,6 +10,7 @@
   --cds-link-02: #2dd10f;
   --cds-focus: #39ff14;
   --cds-border-interactive: #39ff14;
+  --main-primary-color: #39ff14;
 }
 
 /* Primary color overrides */
@@ -33,16 +34,38 @@
 .bx--btn--primary {
   background-color: #39ff14 !important;
   color: #000 !important;
+  font-weight: 600;
 }
 
 .bx--btn--primary:hover {
   background-color: #2dd10f !important;
 }
 
+/* Text/ghost button in navigation */
+.bx--btn--ghost,
+.bx--btn--tertiary {
+  color: #fff !important;
+}
+
+.bx--btn--ghost:hover,
+.bx--btn--tertiary:hover {
+  color: #39ff14 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Dark mode enhancements */
 .dark {
   --cds-interactive-01: #39ff14;
   --cds-text-01: #fff;
+}
+
+/* Navigation link colors on dark header */
+nav a {
+  color: #fff !important;
+}
+
+nav a:hover {
+  color: #39ff14 !important;
 }
 
 /* Hide ClassroomIO branding elements */
@@ -59,4 +82,23 @@ a.text-primary-700,
 
 a.text-primary-700:hover {
   color: #2dd10f !important;
+}
+
+/* Logo text styling */
+.logo span {
+  color: #fff;
+}
+
+/* Contained button (Sign Up) */
+button[class*="contained"],
+.btn-contained {
+  background-color: #39ff14 !important;
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+button[class*="contained"]:hover,
+.btn-contained:hover {
+  background-color: #2dd10f !important;
 }
